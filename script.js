@@ -20,6 +20,7 @@ $("#topNotifications")?.addEventListener("click",()=>showPage("notifications"));
 
 function openAuth(){ $("#authOverlay")?.classList.add("open"); }
 function closeAuth(){ $("#authOverlay")?.classList.remove("open"); }
+$("#topAuth")?.addEventListener("click",openAuth);
 $("#topAvatar")?.addEventListener("click",openAuth);
 $("#authClose")?.addEventListener("click",closeAuth);
 
