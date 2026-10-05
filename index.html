@@ -97,5 +97,25 @@
 <div class="comment-overlay hidden" id="commentOverlay"><div class="comment-card"><button id="commentClose">×</button><h3>Comments</h3><div id="commentsList"></div><form id="commentForm"><input id="commentInput" maxlength="1000" placeholder="Add a comment…" required><button class="create-btn">Post</button></form></div></div>
 <div class="story-viewer hidden" id="storyViewer"><button class="story-close" id="storyClose">×</button><div class="story-view-card"><div class="story-view-media" id="storyViewMedia"></div><div class="story-view-info" id="storyViewInfo"></div></div></div>
 <div class="bottom-nav"><button data-page="home">⌂<small>Home</small></button><button data-page="explore">⌕<small>Explore</small></button><button data-page="create">＋<small>Create</small></button><button data-page="messages">✉<small>Inbox</small></button><button data-page="profile">◉<small>Profile</small></button></div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js?v=20261006a"></script><script src="ui-fix.js?v=20261006a"></script><script src="script.js?v=20261006a"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js?v=20261006b"></script><script src="ui-fix.js?v=20261006b"></script><script src="script.js?v=20261006b"></script>
+<script>
+(function(){
+  function openAuth(){var el=document.getElementById('authOverlay');if(el)el.classList.add('open')}
+  function closeAuth(){var el=document.getElementById('authOverlay');if(el)el.classList.remove('open')}
+  function showPage(p){
+    document.querySelectorAll('.content').forEach(function(s){s.classList.toggle('hidden',s.id!=='page-'+p)});
+    document.querySelectorAll('[data-page]').forEach(function(n){n.classList.toggle('active',n.getAttribute('data-page')===p)});
+    window.scrollTo(0,0);
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest && e.target.closest('#topAuth,#topAvatar,#authClose,[data-page],#newPost,#topNotifications');
+    if(!t)return;
+    if(t.matches('#topAuth,#topAvatar')){e.preventDefault();openAuth();return}
+    if(t.matches('#authClose')){e.preventDefault();closeAuth();return}
+    if(t.matches('[data-page]')){e.preventDefault();showPage(t.getAttribute('data-page'));return}
+    if(t.matches('#newPost')){e.preventDefault();showPage('create');return}
+    if(t.matches('#topNotifications')){e.preventDefault();showPage('notifications');return}
+  });
+})();
+</script>
 </body></html>
