@@ -221,6 +221,7 @@ async function editProfile(){if(!currentUser)return;const name=prompt("Display n
 
 async function loadExplore(q=""){
   const grid=$("#exploreGrid"),results=$("#searchResults");if(!grid||!results)return;
+  if(!supabase){results.innerHTML='<p class="muted">Circla backend is temporarily unavailable. Please refresh the page.</p>';return;}
   if(q.trim()){
     const term=q.trim().replace(/[%_]/g,"");
     const {data}=await supabase.from("profiles").select("id,display_name,username,bio").or(`display_name.ilike.%${term}%,username.ilike.%${term}%`).limit(30);
