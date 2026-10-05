@@ -80,7 +80,27 @@
 <section class="content hidden" id="page-profile"><div class="profile-hero"><div class="avatar huge">A</div><div><p class="eyebrow">@ABDULLAH</p><h1>Abdullah</h1><p>Building, learning and sharing along the way.</p><div class="profile-stats"><b>128 <span>Posts</span></b><b>2.4K <span>Followers</span></b><b>318 <span>Following</span></b></div></div><button class="outline-btn">Edit profile</button></div><div class="profile-grid"><div></div><div></div><div></div><div></div><div></div><div></div></div></section>
 </main>
 </div>
+
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-card">
+    <button class="auth-close" id="authClose" aria-label="Close">×</button>
+    <div class="brand auth-brand"><span class="brand-mark">C</span><span>Circla</span></div>
+    <p class="eyebrow">WELCOME TO CIRCLA</p>
+    <h2 id="authTitle">Join your circle.</h2>
+    <p class="auth-subtitle" id="authSubtitle">Create an account to start sharing moments.</p>
+    <form id="authForm">
+      <div id="authNameWrap" class="auth-field hidden"><label>Display name</label><input id="authName" type="text" autocomplete="name" placeholder="Your name"></div>
+      <div class="auth-field"><label>Email</label><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <div class="auth-field"><label>Password</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="••••••••" minlength="6" required></div>
+      <button class="create-btn auth-submit" type="submit" id="authSubmit">Create account</button>
+      <p class="auth-message" id="authMessage"></p>
+    </form>
+    <button class="auth-switch" id="authSwitch">Already have an account? <b>Log in</b></button>
+  </div>
+</div>
 <div class="bottom-nav"><button data-page="home">⌂<small>Home</small></button><button data-page="explore">⌕<small>Explore</small></button><button data-page="create">＋<small>Create</small></button><button data-page="messages">✉<small>Inbox</small></button><button data-page="profile">◉<small>Profile</small></button></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
