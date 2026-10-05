@@ -261,7 +261,7 @@ async function startConversation(otherId){
   const {data:existingMembers}=await supabase.from("conversation_members").select("conversation_id").eq("user_id",currentUser.id);
   for(const m of existingMembers||[]){const {data:other}=await supabase.from("conversation_members").select("user_id").eq("conversation_id",m.conversation_id).eq("user_id",otherId).maybeSingle();if(other){showPage("messages");const {data:p}=await supabase.from("profiles").select("id,display_name,username").eq("id",otherId).single();return openConversation(m.conversation_id,p)}}
   const {data:conv,error}=await supabase.from("conversations").insert({}).select().single();if(error){alert(error.message);return}
-  await supabase.from("conversation_members").insert([{conversation_id:conv.id,user_id:currentUser.id},{conversation_id:conv.id,user_id:otherId}]);
+  const firstMember=await supabase.from("conversation_members").insert({conversation_id:conv.id,user_id:currentUser.id});if(firstMember.error){alert(firstMember.error.message);return}const secondMember=await supabase.from("conversation_members").insert({conversation_id:conv.id,user_id:otherId});if(secondMember.error){alert(secondMember.error.message);return}
   showPage("messages");const {data:p}=await supabase.from("profiles").select("id,display_name,username").eq("id",otherId).single();await openConversation(conv.id,p);await loadConversations();
 }
 async function openConversation(id,other){
