@@ -6,7 +6,7 @@
 <title>Circla — Your Social Circle, Reimagined</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261006c">
 </head>
 <body>
 <div class="app-shell">
@@ -28,8 +28,8 @@
   <div class="mobile-brand"><img class="brand-logo" src="assets/circla-logo.svg" alt="Circla"><span>Circla</span></div>
   <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search people on Circla" aria-label="Search"></div>
   <button class="icon-btn" id="topNotifications" title="Notifications">♡</button>
-  <button class="auth-top-btn" id="topAuth">Sign in</button>
-  <button class="avatar mini" id="topAvatar" title="Account">A</button>
+  <button class="auth-top-btn" id="topAuth" type="button" onclick="document.getElementById('authOverlay').classList.add('open')">Sign in</button>
+  <button class="avatar mini" id="topAvatar" type="button" title="Account" onclick="document.getElementById('authOverlay').classList.add('open')">A</button>
 </header>
 
 <section class="content" id="page-home">
@@ -80,7 +80,7 @@
 </main></div>
 
 <div class="auth-overlay" id="authOverlay"><div class="auth-card">
-  <button class="auth-close" id="authClose">×</button>
+  <button class="auth-close" id="authClose" type="button" onclick="document.getElementById('authOverlay').classList.remove('open')">×</button>
   <div class="brand auth-brand"><img class="brand-logo" src="assets/circla-logo.svg" alt="Circla"><span>Circla</span></div>
   <p class="eyebrow">WELCOME TO CIRCLA</p><h2 id="authTitle">Join your circle.</h2><p class="auth-subtitle" id="authSubtitle">Create an account to start sharing moments.</p>
   <form id="authForm">
