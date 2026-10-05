@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="description" content="Circla — your social circle, reimagined.">
+<title>Circla — Your Social Circle, Reimagined</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">C</span><span>Circla</span></div>
+  <nav>
+    <button class="nav-item active" data-page="home"><span>⌂</span> Home</button>
+    <button class="nav-item" data-page="explore"><span>⌕</span> Explore</button>
+    <button class="nav-item" data-page="create"><span>＋</span> Create</button>
+    <button class="nav-item" data-page="notifications"><span>♡</span> Notifications <b class="dot"></b></button>
+    <button class="nav-item" data-page="messages"><span>✉</span> Messages</button>
+    <button class="nav-item" data-page="profile"><span>◉</span> Profile</button>
+  </nav>
+  <div class="sidebar-bottom"><button class="nav-item"><span>☼</span> Appearance</button></div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div class="mobile-brand"><span class="brand-mark">C</span> Circla</div>
+  <div class="top-search"><span>⌕</span><input placeholder="Search Circla" aria-label="Search"></div>
+  <button class="icon-btn">♡</button><button class="avatar mini">A</button>
+</header>
+
+<section class="content" id="page-home">
+  <div class="welcome-row"><div><p class="eyebrow">GOOD AFTERNOON</p><h1>Your circle, your world.</h1></div><button class="create-btn" id="newPost">＋ Create post</button></div>
+
+  <div class="stories">
+    <div class="story add-story"><div class="story-avatar plus">＋</div><span>Your story</span></div>
+    <div class="story"><div class="story-ring"><div class="avatar">M</div></div><span>Maya</span></div>
+    <div class="story"><div class="story-ring"><div class="avatar">J</div></div><span>Jordan</span></div>
+    <div class="story"><div class="story-ring"><div class="avatar">S</div></div><span>Sofia</span></div>
+    <div class="story"><div class="story-ring"><div class="avatar">R</div></div><span>Ryan</span></div>
+    <div class="story"><div class="story-ring"><div class="avatar">N</div></div><span>Nora</span></div>
+  </div>
+
+  <div class="feed-layout">
+    <div class="feed">
+      <article class="post">
+        <div class="post-head"><div class="avatar">M</div><div><strong>Maya Chen</strong><small>@mayachen · 24m</small></div><button class="more">•••</button></div>
+        <p class="post-text">A little reminder: the best moments usually aren't planned. ✨</p>
+        <div class="post-media media-one"><span>moments worth keeping</span></div>
+        <div class="post-actions"><button class="like">♡ <span>248</span></button><button>◯ <span>31</span></button><button>⌁ <span>18</span></button><button class="save">♧</button></div>
+        <small class="liked">Liked by <b>alex</b> and 247 others</small>
+      </article>
+      <article class="post">
+        <div class="post-head"><div class="avatar alt">J</div><div><strong>Jordan Lee</strong><small>@jordanlee · 1h</small></div><button class="more">•••</button></div>
+        <p class="post-text">Building something new. Can't wait to show you.</p>
+        <div class="post-media media-two"><span>WORK IN PROGRESS</span></div>
+        <div class="post-actions"><button class="like">♡ <span>96</span></button><button>◯ <span>12</span></button><button>⌁ <span>7</span></button><button class="save">♧</button></div>
+      </article>
+    </div>
+    <aside class="right-rail">
+      <div class="profile-card"><div class="profile-main"><div class="avatar large">A</div><div><strong>Abdullah</strong><small>@abdullah</small></div><button>•••</button></div><div class="stats"><span><b>128</b> posts</span><span><b>2.4K</b> followers</span><span><b>318</b> following</span></div></div>
+      <div class="suggestions"><div class="section-title">Suggested for you <button>See all</button></div><div class="suggest"><div class="avatar">L</div><div><b>Layla Noor</b><small>@laylanoor</small></div><button>Follow</button></div><div class="suggest"><div class="avatar alt">D</div><div><b>Daniel Kim</b><small>@danielkim</small></div><button>Follow</button></div><div class="suggest"><div class="avatar">A</div><div><b>Aria Shah</b><small>@ariashah</small></div><button>Follow</button></div></div>
+      <p class="footer">© 2026 Circla · Privacy · Terms</p>
+    </aside>
+  </div>
+</section>
+
+<section class="content hidden" id="page-explore"><div class="page-title"><p class="eyebrow">DISCOVER</p><h1>Explore</h1><p>Find people, ideas and moments worth sharing.</p></div><div class="explore-grid"><div class="tile t1">CREATIVE<br>SPACES</div><div class="tile t2">TRAVEL<br>DIARIES</div><div class="tile t3">EVERYDAY<br>MOMENTS</div><div class="tile t4">DESIGN<br>DETAILS</div><div class="tile t5">NEW<br>IDEAS</div><div class="tile t6">YOUR<br>CIRCLE</div></div></section>
+
+<section class="content hidden" id="page-create"><div class="page-title"><p class="eyebrow">CREATE</p><h1>Share a moment.</h1></div><div class="create-panel"><div class="upload-icon">＋</div><h2>Create your first post</h2><p>Photos and stories will live here. This interface is ready for the real upload system.</p><button class="create-btn">Choose media</button></div></section>
+
+<section class="content hidden" id="page-notifications"><div class="page-title"><p class="eyebrow">ACTIVITY</p><h1>Notifications</h1></div><div class="list-card"><div>♡ <b>Maya Chen</b> liked your post <small>8m</small></div><div>＋ <b>Jordan Lee</b> started following you <small>21m</small></div><div>◯ <b>Sofia</b> commented on your story <small>1h</small></div></div></section>
+
+<section class="content hidden" id="page-messages"><div class="page-title"><p class="eyebrow">PRIVATE</p><h1>Messages</h1></div><div class="list-card chats"><div><div class="avatar">M</div><span><b>Maya Chen</b><small>That looks amazing ✨</small></span><time>2m</time></div><div><div class="avatar alt">J</div><span><b>Jordan Lee</b><small>See you soon!</small></span><time>28m</time></div></div></section>
+
+<section class="content hidden" id="page-profile"><div class="profile-hero"><div class="avatar huge">A</div><div><p class="eyebrow">@ABDULLAH</p><h1>Abdullah</h1><p>Building, learning and sharing along the way.</p><div class="profile-stats"><b>128 <span>Posts</span></b><b>2.4K <span>Followers</span></b><b>318 <span>Following</span></b></div></div><button class="outline-btn">Edit profile</button></div><div class="profile-grid"><div></div><div></div><div></div><div></div><div></div><div></div></div></section>
+</main>
+</div>
+<div class="bottom-nav"><button data-page="home">⌂<small>Home</small></button><button data-page="explore">⌕<small>Explore</small></button><button data-page="create">＋<small>Create</small></button><button data-page="messages">✉<small>Inbox</small></button><button data-page="profile">◉<small>Profile</small></button></div>
+<script src="script.js"></script>
+</body>
+</html>
