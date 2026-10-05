@@ -28,3 +28,4 @@
   .story-view-media{height:76vh}
   .story-close{right:15px}
 }
+.brand-logo{width:34px;height:34px;border-radius:10px;display:block;object-fit:cover}.mobile-brand .brand-logo{width:29px;height:29px;border-radius:8px}.auth-brand .brand-logo{width:34px;height:34px}.brand-logo+span{line-height:1}
