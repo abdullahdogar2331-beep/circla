@@ -1,0 +1,1 @@
+window.circlaSupabase = window.supabase.createClient("https://tflejorfkmyhdhlwluml.supabase.co","sb_publishable_ZnDDksa5LUlOEQWr-phzbA_gCjUOe9g");
