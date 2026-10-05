@@ -36,7 +36,7 @@
 <section class="content" id="page-home">
   <div class="welcome-row"><div><p class="eyebrow">GOOD AFTERNOON</p><h1>Your circle, your world.</h1></div><button class="create-btn" id="newPost">＋ Create post</button></div>
 
-  <div class="stories">
+  <div class="stories" id="storiesStrip">
     <div class="story add-story"><div class="story-avatar plus">＋</div><span>Your story</span></div>
     <div class="story"><div class="story-ring"><div class="avatar">M</div></div><span>Maya</span></div>
     <div class="story"><div class="story-ring"><div class="avatar">J</div></div><span>Jordan</span></div>
@@ -46,7 +46,7 @@
   </div>
 
   <div class="feed-layout">
-    <div class="feed">
+    <div class="feed" id="feedList">
       <article class="post">
         <div class="post-head"><div class="avatar">M</div><div><strong>Maya Chen</strong><small>@mayachen · 24m</small></div><button class="more">•••</button></div>
         <p class="post-text">A little reminder: the best moments usually aren't planned. ✨</p>
@@ -81,6 +81,7 @@
 </div>
 <input id="mediaInput" type="file" accept="image/*,video/*" hidden>
 <p class="upload-status" id="uploadStatus"></p>
+<div class="analytics-panel" id="storyAnalytics"><div><span class="eyebrow">YOUR STORY ANALYTICS</span><h3>Story views</h3></div><div id="analyticsList"><p class="muted">Log in and upload a story to see viewer analytics.</p></div></div>
 </div></section>
 
 <section class="content hidden" id="page-notifications"><div class="page-title"><p class="eyebrow">ACTIVITY</p><h1>Notifications</h1></div><div class="list-card"><div>♡ <b>Maya Chen</b> liked your post <small>8m</small></div><div>＋ <b>Jordan Lee</b> started following you <small>21m</small></div><div>◯ <b>Sofia</b> commented on your story <small>1h</small></div></div></section>
@@ -105,7 +106,7 @@
       <button class="create-btn auth-submit" type="submit" id="authSubmit">Create account</button>
       <p class="auth-message" id="authMessage"></p>
     </form>
-    <button class="auth-switch" id="authSwitch">Already have an account? <b>Log in</b></button>
+    <button class="auth-switch" id="authSwitch">Already have an account? <b>Log in</b></button><button class="auth-logout hidden" id="authLogout">Log out</button>
   </div>
 </div>
 <div class="bottom-nav"><button data-page="home">⌂<small>Home</small></button><button data-page="explore">⌕<small>Explore</small></button><button data-page="create">＋<small>Create</small></button><button data-page="messages">✉<small>Inbox</small></button><button data-page="profile">◉<small>Profile</small></button></div>
